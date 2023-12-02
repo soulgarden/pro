@@ -1,0 +1,19 @@
+version: "3"
+
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 160.10.102.0/24
+
+services:
+  nginx:
+    container_name: stockwayup_nginx
+    build:
+      context: .
+      dockerfile: docker/nginx/Dockerfile
+    expose:
+      - 80
+    networks:
+      default:
+        ipv4_address: 160.10.102.3

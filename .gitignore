@@ -1,0 +1,15 @@
+### Web template
+*.asp
+*.cer
+*.csr
+*.htm
+*.html
+*.js
+*.jsp
+*.php
+*.rss
+*.wasm
+*.wat
+*.xhtml
+
+.idea
