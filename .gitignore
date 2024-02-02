@@ -3,7 +3,6 @@
 *.cer
 *.csr
 *.htm
-*.html
 *.js
 *.jsp
 *.php
