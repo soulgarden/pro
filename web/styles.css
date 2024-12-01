@@ -71,6 +71,10 @@ h3 {
     text-align: center;
 }
 
+.about li {
+    list-style-type: none;
+}
+
 .swup {
     font: 14px PT Sans, Arial, Helvetica Neue, Helvetica, sans-serif;
 }
