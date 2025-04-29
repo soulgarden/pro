@@ -1,4 +1,4 @@
-FROM nginx:1.25.3-alpine as nginx
+FROM nginx:1.27.5-alpine AS nginx
 
 COPY ./web/ /var/www/pro
 
