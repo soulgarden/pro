@@ -10,5 +10,5 @@ docker_down dd:
 build: bp
 
 build_prod bp:
-	docker build . -f ./docker/nginx/Dockerfile -t soulgarden/swup:pro-0.0.7 --platform linux/amd64
-	docker push soulgarden/swup:pro-0.0.7
+	docker build . -f ./docker/nginx/Dockerfile -t soulgarden/swup:pro-0.0.8 --platform linux/amd64
+	docker push soulgarden/swup:pro-0.0.8
