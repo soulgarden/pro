@@ -1,19 +1,12 @@
-version: "3"
-
-networks:
-  default:
-    ipam:
-      config:
-        - subnet: 160.10.102.0/24
-
+name: soulgarden-pro
 services:
   nginx:
-    container_name: stockwayup_nginx
+    container_name: soulgarden_pro_nginx
+    image: soulgarden/swup:pro-0.0.9
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
-    expose:
-      - 80
-    networks:
-      default:
-        ipv4_address: 160.10.102.3
+      pull: true
+    ports:
+      - "8080:80"
+    restart: unless-stopped

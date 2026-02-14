@@ -4,6 +4,7 @@
 *.csr
 *.htm
 *.js
+!web/script.js
 *.jsp
 *.php
 *.rss

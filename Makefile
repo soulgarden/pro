@@ -1,14 +1,23 @@
-docker_up du:
-	docker-compose up --build -d
+COMPOSE ?= docker compose
+IMAGE ?= soulgarden/swup:pro-0.0.9
 
-docker_up_mac dum:
-	docker-compose -f docker-compose.yml -f docker-compose-mac.yml up --build -d
+.PHONY: docker_up du docker_down dd docker_logs dl build bp push pp release rp
+
+docker_up du:
+	$(COMPOSE) up --build -d
 
 docker_down dd:
-	docker-compose down
+	$(COMPOSE) down --remove-orphans
 
-build: bp
+docker_logs dl:
+	$(COMPOSE) logs -f nginx
 
-build_prod bp:
-	docker build . -f ./docker/nginx/Dockerfile -t soulgarden/swup:pro-0.0.8 --platform linux/amd64
-	docker push soulgarden/swup:pro-0.0.8
+build bp:
+	docker build . -f ./docker/nginx/Dockerfile -t $(IMAGE) --platform linux/amd64
+
+push pp:
+	docker push $(IMAGE)
+
+release rp:
+	$(MAKE) build
+	$(MAKE) push
