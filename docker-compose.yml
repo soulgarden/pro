@@ -2,7 +2,7 @@ name: soulgarden-pro
 services:
   nginx:
     container_name: soulgarden_pro_nginx
-    image: soulgarden/swup:pro-0.0.9
+    image: soulgarden/swup:pro-0.0.10
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
