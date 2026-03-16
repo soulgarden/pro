@@ -1,5 +1,5 @@
 COMPOSE ?= docker compose
-IMAGE ?= soulgarden/swup:pro-0.0.10
+IMAGE ?= soulgarden/swup:pro-0.0.11
 
 .PHONY: docker_up du docker_down dd docker_logs dl build bp push pp release rp
 

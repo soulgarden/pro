@@ -2,11 +2,11 @@ name: soulgarden-pro
 services:
   nginx:
     container_name: soulgarden_pro_nginx
-    image: soulgarden/swup:pro-0.0.10
+    image: soulgarden/swup:pro-0.0.11
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
       pull: true
     ports:
-      - "8080:80"
+      - "8080:8080"
     restart: unless-stopped
